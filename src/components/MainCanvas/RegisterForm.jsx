@@ -121,7 +121,9 @@ function RegisterForm() {
                 size="small"
                 fullWidth
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) =>
+                  setPhone(e.target.value.replace(/[^0-9]/g, ""))
+                }
               />
             </Box>
           </Grid>

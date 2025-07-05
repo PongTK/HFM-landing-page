@@ -36,7 +36,7 @@ function Prizes() {
   return (
     <Box
       sx={{
-        width: "100vw",
+        width: "100%",
         minHeight: "100vh",
         backgroundColor: "#FFFFFF",
         display: "flex",
@@ -62,7 +62,7 @@ function Prizes() {
         <Typography
           variant="h2"
           sx={{
-            fontFamily: "Sofia Sans Condensed",
+            fontFamily: "open Sans",
             fontWeight: 400,
             fontStyle: "regular",
             fontSize: { xs: "32px", sm: "40px", md: "50px" },
@@ -94,7 +94,7 @@ function Prizes() {
         </Box>
         <Box
           sx={{
-            mt: 10,
+            mt: 6,
           }}
         >
           <Button

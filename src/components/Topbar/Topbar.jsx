@@ -5,7 +5,6 @@ import {
   IconButton,
   Typography,
   Button,
-  MenuItem,
   Drawer,
   List,
   ListItem,
@@ -134,9 +133,9 @@ function Topbar() {
   return (
     <>
       {/* Top info bar: diaplay only for desktop */}
-      {showTopbar && !isTopbarMobile && (
+      {!isTopbarMobile && (
         <AppBar
-          position="fixed"
+          position="relative"
           elevation={0}
           sx={{
             bgcolor: "#161616",
@@ -163,7 +162,6 @@ function Topbar() {
           </Toolbar>
         </AppBar>
       )}
-
       {/* Main navbar */}
       <AppBar
         position="fixed"
@@ -173,6 +171,7 @@ function Topbar() {
           color: "#fff",
           height: 100,
           top: showTopbar && !isTopbarMobile ? 36 : 0,
+          transition: "top 0.2s ease-in-out",
         }}
       >
         <Toolbar
@@ -262,7 +261,7 @@ function Topbar() {
         </Drawer>
       </AppBar>
       {/* Spacer for fixed bars */}
-      <Box sx={{ height: showTopbar && !isTopbarMobile ? 76 : 56 }} />
+      <Box sx={{ height: /* showTopbar && */ !isTopbarMobile ? 76 : 56 }} />
     </>
   );
 }
